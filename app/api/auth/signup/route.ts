@@ -4,6 +4,8 @@ import { connectDB } from "@/lib/db";
 import { signToken } from "@/lib/jwt";
 import User, { IUserSafe } from "@/models/User";
 
+export const dynamic = 'force-dynamic';
+
 interface SignupBody {
   name: string;
   email: string;
