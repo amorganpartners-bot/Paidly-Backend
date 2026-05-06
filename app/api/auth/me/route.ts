@@ -3,6 +3,8 @@ import { connectDB } from "@/lib/db";
 import { verifyToken, extractTokenFromHeader } from "@/lib/jwt";
 import User, { IUserSafe } from "@/models/User";
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(req: NextRequest): Promise<NextResponse> {
   try {
     const authHeader = req.headers.get("authorization");
